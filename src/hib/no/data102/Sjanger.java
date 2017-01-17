@@ -1,7 +1,7 @@
 package hib.no.data102;
 
 public enum Sjanger {
-	ROCK(0), POP(1), OPERA(2), CLASSIC(3);
+	ROCK(0), POP(1), OPERA(2), CLASSIC(3), IKKEOPPGITT(4);
 	private int nr;
 
 	private Sjanger(int n) { //Konstruktør
@@ -30,6 +30,9 @@ public enum Sjanger {
 				sjang = sj;
 				break;
 			}
+		}
+		if (sjang == null) {
+			sjang = Sjanger.IKKEOPPGITT;
 		}
 		return sjang;
 	}
