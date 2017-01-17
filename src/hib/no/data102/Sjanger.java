@@ -13,7 +13,7 @@ public enum Sjanger {
 	}
 
 	public static Sjanger finnSjanger(int n) {
-		Sjanger sjang = null;
+		Sjanger sjang = Sjanger.IKKEOPPGITT;
 		for (Sjanger sj : Sjanger.values()) {
 			if (sj.nr == n) {
 				sjang = sj;
@@ -24,16 +24,14 @@ public enum Sjanger {
 	}
 
 	public static Sjanger finnSjanger(String navn){
-		Sjanger sjang = null;
+		Sjanger sjang = Sjanger.IKKEOPPGITT;
 		for (Sjanger sj : Sjanger.values()){
 			if(sj.toString().equals(navn.toUpperCase())){
 				sjang = sj;
 				break;
 			}
 		}
-		if (sjang == null) {
-			sjang = Sjanger.IKKEOPPGITT;
-		}
+		
 		return sjang;
 	}
 }
