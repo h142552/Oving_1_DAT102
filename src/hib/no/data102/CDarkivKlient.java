@@ -7,7 +7,12 @@ public class CDarkivKlient {
 	public static void main(String[] args) {
 		// init
 		CDarkivADT cda = Fil.lesFraFil("CDA.txt");
-		CD.setAntall(cda.hentAntall());
+		if(cda == null) {
+			cda = new CDarkiv(0);
+			Fil.skrivTilFil(cda, "CDA.txt");
+		}
+		else
+			CD.setAntall(cda.hentAntall());
 
 		Meny meny = new Meny(cda);
 		meny.start();

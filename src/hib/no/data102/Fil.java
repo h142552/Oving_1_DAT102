@@ -32,7 +32,7 @@ public class Fil {
 			reader.close();
 		} catch (FileNotFoundException e) {
 			//e.printStackTrace();
-			return new CDarkiv(5);
+			return null;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
