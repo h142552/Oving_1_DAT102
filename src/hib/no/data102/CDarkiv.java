@@ -92,7 +92,8 @@ public class CDarkiv implements CDarkivADT {
 	//
 	// Utvider cdTabellen med 1
 	private void utvidKapasitet() {
-		CD[] hjelpetabell = new CD[(int)(this.cdTabell.length + 10)];
+		double lengde = Math.ceil((double)this.cdTabell.length * 1.1);
+		CD[] hjelpetabell = new CD[(int)(lengde)];
 		for(int i = 0; i < this.cdTabell.length; i++)
 			hjelpetabell[i] = this.cdTabell[i];
 
