@@ -102,6 +102,7 @@ public class CDarkiv implements CDarkivADT {
 		for(int i = 0; i < this.cdTabell.length; i++)
 			hjelpetabell[i] = this.cdTabell[i];
 
+
 		this.cdTabell = hjelpetabell;
 	}
 
