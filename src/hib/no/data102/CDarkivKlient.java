@@ -14,6 +14,7 @@ public class CDarkivKlient {
 		else
 			CD.setAntall(cda.hentAntall());
 
+
 		Meny meny = new Meny(cda);
 		meny.start();
 	}

@@ -7,6 +7,7 @@ public class Fil {
 	// Kan være static så lenge den er final. Metodene i Fil er også statiske
 	final static String SKILLE = "#"; 
 
+
 	// Lese et CDarkiv fra tekstfil
 	public static CDarkivADT lesFraFil(String filnavn) {
 		CDarkivADT cda = null; 
