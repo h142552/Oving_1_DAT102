@@ -1,22 +1,28 @@
 
 oppgave 2
 
-a
+a)
 i		O(N²)
 ii		O(N)
 iii		O(N³)
 iiii	O(Log N)
 
-b
+b)
 O(N²)
 
-c
+c)
 	alg a O(N)	alg b O(N²)	alg c O(1)
 til		n + 1	   n² + 1		1
-add			n			n²		1
-mul			0			0		1
-div			0			0		1
+add		n		n²		1
+mul		0		0		1
+div		0		0		1
 tot	   2n + 1	  2n² + 1		4
 
 
+d)
 
+log(n)  : 19.9 ns
+n       : 1 s
+nlog(n) : 19.9 s
+n^2     : 11.5 dager
+n^3     : 31688 år
