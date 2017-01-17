@@ -1,0 +1,22 @@
+
+oppgave 2
+
+a
+i		O(N²)
+ii		O(N)
+iii		O(N³)
+iiii	O(Log N)
+
+b
+O(N²)
+
+c
+	alg a O(N)	alg b O(N²)	alg c O(1)
+til		n + 1	   n² + 1		1
+add			n			n²		1
+mul			0			0		1
+div			0			0		1
+tot	   2n + 1	  2n² + 1		4
+
+
+
