@@ -1,15 +1,15 @@
 package hib.no.data102;
 
 public class CD {
-	public static int antall = 0; // Inkrementerer for hver CD //TODO: finn høgste cd-nummer eller bruk random
-	private int cdNummer; // Read-only
+	public static int antall = 0;
+	private int cdNummer; 
 	private int aar;
 	private String artistnavn;
 	private String tittel;
 	private String plateselskap;
 	private Sjanger sjanger;
 
-	public CD() {} // evt. at tom konstruktør oppretter cdNummer.
+	public CD() {} 
 	
 	// Konstruktør for nye cder. Oppretter cdNummer selv.
 	public CD(String artistnavn, String tittel,
@@ -19,7 +19,7 @@ public class CD {
 		this.aar = aar;
 		this.plateselskap = plateselskap;
 		this.sjanger = sjanger;
-		this.cdNummer = antall++; // inkrementerer etter vi har fått verdien TODO:
+		this.cdNummer = antall++; // inkrementerer etter vi har fått verdien
 	}
 
 	// Konstruktør for cder som leses inn fra fil. Har cdNummer i parameterlisten
@@ -34,6 +34,7 @@ public class CD {
 	}
 	
 	// get
+	public static int getAntall()	{ return CD.antall; }
 	public int getCdNummer()		{ return this.cdNummer; }
 	public int getAar()				{ return this.aar; }
 	public String getArtistnavn()   { return this.artistnavn; }
@@ -42,6 +43,7 @@ public class CD {
 	public Sjanger getSjanger()     { return this.sjanger; }
 	
 	// set
+	public static void setAntall(int antall) {CD.antall = antall; }
 	public void setAar(int aar) { this.aar = aar; }
 	public void setArtistnavn(String artistnavn) { this.artistnavn = artistnavn; }
 	public void setTittel(String tittel) { this.tittel = tittel; }
