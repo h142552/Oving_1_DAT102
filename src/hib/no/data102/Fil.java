@@ -32,7 +32,7 @@ public class Fil {
 			reader.close();
 		} catch (FileNotFoundException e) {
 			//e.printStackTrace();
-			return null;
+			return new CDarkiv(5);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -46,6 +46,14 @@ public class Fil {
 	 */
 	// Lagre et CDarkiv til tekstfil
 	public static boolean skrivTilFil(CDarkivADT cdarkiv, String filnavn) {
+		try {
+			File file = new File(filnavn);
+			if(!file.exists())
+				file.createNewFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 		try(Writer writer = new BufferedWriter(new OutputStreamWriter(
 				new FileOutputStream(filnavn), "utf-8"))) {
 			writer.write(Integer.toString(cdarkiv.hentAntall()) + "\n");
