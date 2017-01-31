@@ -8,7 +8,7 @@ public class CDarkivKlient {
 		// init
 		CDarkivADT cda = Fil.lesFraFil("CDA.txt");
 		if(cda == null) {
-			cda = new CDarkiv(0);
+			cda = new CDarkiv2();
 			Fil.skrivTilFil(cda, "CDA.txt");
 		}
 		else
