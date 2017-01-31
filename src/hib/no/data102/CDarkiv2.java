@@ -7,6 +7,10 @@ public class CDarkiv2 implements CDarkivADT {
 	private int antall;
 	private LinearNode<CD> start;
 
+	public CDarkiv2(){
+		this.antall = 0;
+	}
+	
 	@Override
 	public CD[] hentCdTabell() {
 		CD[] tabell = new CD[antall];
@@ -22,8 +26,13 @@ public class CDarkiv2 implements CDarkivADT {
 	@Override
 	public void leggTilCd(CD nyCd) {
 		LinearNode<CD> nyNode = new LinearNode<CD>(nyCd);
-		nyNode.setNeste(start);
-		start = nyNode;
+		if(antall > 0){
+			nyNode.setNeste(start);
+			start = nyNode;
+		}
+		else{
+			start = nyNode;
+		}
 		antall++;
 	}
 
