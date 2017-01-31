@@ -78,7 +78,7 @@ public class Tekstgrensesnitt {
 	public void skrivUtCdArtist(CDarkivADT cda, String artist) {
 		for(int i = 0; i < cda.hentAntall(); i++)
 			if(cda.hentCdTabell()[i].getArtistnavn().toLowerCase()
-					.equals(artist.toLowerCase()))
+					.contains(artist.toLowerCase()))
 				visCD(cda.hentCdTabell()[i]);
 	}
 
