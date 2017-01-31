@@ -48,7 +48,7 @@ public class CDarkiv2 implements CDarkivADT {
 					this.start = this.start.getNeste();
 				else
 					q.setNeste(p.getNeste());
-				
+				antall--;
 				funnet = true;
 			}
 			q = p;
