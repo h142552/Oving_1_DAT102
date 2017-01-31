@@ -29,8 +29,23 @@ public class CDarkiv2 implements CDarkivADT {
 
 	@Override
 	public boolean slettCd(int cdNr) {
-		// TODO Auto-generated method stub
-		return false;
+		LinearNode<CD> p = this.start;
+		LinearNode<CD> q = this.start;
+		boolean funnet = false;
+
+		for(int i = 0; i < this.antall && !funnet; i++) {
+			if(p.getElement().getCdNummer() == cdNr) {
+				if(p.equals(this.start))
+					this.start = this.start.getNeste();
+				else
+					q.setNeste(p.getNeste());
+				
+				funnet = true;
+			}
+			q = p;
+			p = p.getNeste();
+		}
+		return funnet;
 	}
 
 	@Override
