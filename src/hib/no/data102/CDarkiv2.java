@@ -103,14 +103,22 @@ public class CDarkiv2 implements CDarkivADT {
 
 	@Override
 	public int hentAntall() {
-		// TODO Auto-generated method stub
-		return 0;
+		return antall;
 	}
 
 	@Override
 	public int hentAntall(Sjanger sjanger) {
-		// TODO Auto-generated method stub
-		return 0;
+		LinearNode<CD> p = start;
+		int i = 0;
+		
+		while(p.getNeste() != null) {
+			if(p.getElement().getSjanger().equals(sjanger)) {
+				i++;
+			}
+			p = p.getNeste();
+		}
+		
+		return i;
 	}
 
 }
