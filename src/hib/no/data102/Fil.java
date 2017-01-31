@@ -15,7 +15,7 @@ public class Fil {
 		
 		try(BufferedReader reader = new BufferedReader(new FileReader(filnavn))){
 			antall = Integer.parseInt(reader.readLine()); // Leser første linje i filen
-			cda = new CDarkiv(antall);
+			cda = new CDarkiv2();
 			CD cd;
 			String linje = "";
 			String[] felt;

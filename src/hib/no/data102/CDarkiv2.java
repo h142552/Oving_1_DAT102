@@ -111,7 +111,7 @@ public class CDarkiv2 implements CDarkivADT {
 		LinearNode<CD> p = start;
 		int i = 0;
 		
-		while(p.getNeste() != null) {
+		while(p != null) {
 			if(p.getElement().getSjanger().equals(sjanger)) {
 				i++;
 			}
