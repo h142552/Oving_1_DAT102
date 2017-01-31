@@ -63,7 +63,7 @@ public class CDarkiv2 implements CDarkivADT {
 		LinearNode<CD> p = start;
 		int i = 0;
 		
-		while(p.getNeste() != null) {
+		while(p != null) {
 			if(p.getElement().getTittel().toLowerCase().contains(delstreng.toLowerCase())) {
 				tabell[i] = p.getElement();
 				i++;
@@ -85,7 +85,7 @@ public class CDarkiv2 implements CDarkivADT {
 		LinearNode<CD> p = start;
 		int i = 0;
 		
-		while(p.getNeste() != null) {
+		while(p != null) {
 			if(p.getElement().getArtistnavn().toLowerCase().contains(delstreng.toLowerCase())) {
 				tabell[i] = p.getElement();
 				i++;
