@@ -42,10 +42,6 @@ public class Fil {
 		return cda;
 	}
 
-	/*
-	 * finn ut:
-	 * trengs boolean utvid? Hva er den til?
-	 */
 	// Lagre et CDarkiv til tekstfil
 	public static boolean skrivTilFil(CDarkivADT cdarkiv, String filnavn) {
 		try {
