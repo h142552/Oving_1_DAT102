@@ -42,14 +42,17 @@ public class SirkulaerKoe<T> implements KoeADT<T>{
 	
 
 	@Override
-	public T utKoe() {
+	public T utKoe() throws EmptyCollectionException {
 		T resultat = null;
-		if(!erTom()) {
-			resultat = koe[front];
-			koe[front] = null;
-			front = (front + 1) % koe.length;
-			antall--;
+		if(erTom()) {
+			throw new EmptyCollectionException("Koe");
 		}
+
+		resultat = koe[front];
+		koe[front] = null;
+		front = (front + 1) % koe.length;
+		antall--;
+		
 		return resultat;
 	}
 
