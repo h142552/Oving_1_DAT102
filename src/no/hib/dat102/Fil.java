@@ -33,7 +33,6 @@ public class Fil {
 			
 			reader.close();
 		} catch (FileNotFoundException e) {
-			//e.printStackTrace();
 			return null;
 		} catch (IOException e) {
 			e.printStackTrace();
