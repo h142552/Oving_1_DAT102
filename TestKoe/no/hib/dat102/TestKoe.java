@@ -12,6 +12,7 @@ import org.junit.Test;
  *
  */
 public class TestKoe {
+	
 
 	// Referanse til kø
 	private KoeADT<Integer> koe;
